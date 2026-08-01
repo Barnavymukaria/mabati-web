@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royal Mabati - Premium Roofing Sheets</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<style>
+    /* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #1a1a2e;
+    background: #fafafa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: #0f1a2e;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* ===== LOGO AS IMAGE ===== */
+.logo-sign {
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.logo-image {
+    display: block;
+    height: 120px;
+    width: auto;
+}
+
+/* ===== NAVIGATION ===== */
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #d4a843;
+}
+
+/* ===== PHONE ===== */
+.phone a {
+    color: #d4a843;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    background: rgba(255,255,255,0.08);
+    padding: 8px 18px;
+    border-radius: 30px;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.phone a:hover {
+    background: rgba(212, 168, 67, 0.2);
+}
+
+/* ===== HERO ===== */
+.hero {
+    background: linear-gradient(135deg, #0f1a2e 0%, #1a3a5c 100%);
+    color: #fff;
+    padding: 100px 0 90px;
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content h2 {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #d4a843;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content .hero-sub {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 40px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.btn-primary {
+    background: #d4a843;
+    color: #0f1a2e;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: #fff;
+}
+
+/* ===== WHY CHOOSE ===== */
+.why-choose {
+    background: #f8f9fa;
+    padding: 80px 0 70px;
+}
+
+.section-title {
+    color: #0f1a2e;
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-title::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #d4a843;
+    margin: 0 auto 15px;
+    border-radius: 2px;
+}
+
+.section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.benefits-title {
+    color: #0f1a2e;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+}
+
+.benefits-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 40px;
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    color: #333;
+    font-size: 17px;
+    padding: 12px 0 12px 35px;
+    position: relative;
+    border-bottom: 1px solid #e9ecef;
+    line-height: 1.5;
+}
+
+.benefits-list li::before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    font-size: 18px;
+}
+
+.benefits-list li:last-child {
+    border-bottom: none;
+}
+
+/* ===== PRODUCTS SECTION ===== */
+.products-section {
+    background: #ffffff;
+    padding: 80px 0 70px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.divider {
+    width: 80px;
+    height: 3px;
+    background: #d4a843;
+    margin: 0 auto 40px;
+    border-radius: 2px;
+}
+
+/* ===== PRODUCT GRID ===== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid #d4a843;
+    background: #e9ecef;
+    margin-bottom: 15px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== VIDEO STYLES ===== */
+.product-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-details {
+    width: 100%;
+}
+
+.product-name {
+    color: #0f1a2e;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.product-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.btn-order {
+    background: #0f1a2e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    transition: background 0.3s, transform 0.3s;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-order:hover {
+    background: #1a2d4a;
+    transform: scale(1.03);
+}
+
+.btn-whatsapp-order {
+    background: #25D366;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    transition: background 0.3s, transform 0.3s;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-whatsapp-order:hover {
+    background: #1da851;
+    transform: scale(1.03);
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+    background: #f8f9fa;
+    padding: 80px 0 70px;
+}
+
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid #e9ecef;
+}
+
+.contact-card h3 {
+    color: #0f1a2e;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.contact-card a {
+    color: #0f1a2e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-card a:hover {
+    color: #d4a843;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #0f1a2e;
+    color: #fff;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #d4a843;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+.footer-section a {
+    color: #d4a843;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* ===== FLOATING WHATSAPP ===== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: #fff;
+    padding: 16px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 4px 40px rgba(37, 211, 102, 0.7); }
+    100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content .hero-sub {
+        font-size: 18px;
+    }
+
+    .logo-image {
+        height: 50px;
+    }
+
+    .phone a {
+        font-size: 15px;
+        padding: 6px 14px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+}
+</style>
+
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- LOGO AS IMAGE -->
+                <div class="logo-sign">
+                    <img src="images/IMG-20260731-WA0002.jpg" alt="Royal Mabati Logo" class="logo-image" />
+                </div>
+
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#why">Why Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="phone">
+                    <a href="tel:0762727978">📞 0762 727 978</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to Royal Mabati</h2>
+                <h1>Premium Quality Roofing Sheets <br />for Every Kenyan Home</h1>
+                <p class="hero-sub">Durable. Affordable. Delivered Nationwide.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">Get a Free Quote</a>
+                    <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20need%20a%20quote%20for%20roofing%20sheets" 
+                       target="_blank" 
+                       class="btn btn-whatsapp">💬 WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose" id="why">
+        <div class="container">
+            <h2 class="section-title"># WHY CHOOSE ROYAL MABATI</h2>
+            <p class="section-description">
+                Our products guarantee the best quality with the KEBS Diamond Mark of Quality. 
+                The Mabati is rustproof, suitable for all Kenyan atmospheric conditions and 
+                can be used for all sorts of construction and application.
+            </p>
+
+            <h3 class="benefits-title">BENEFITS OF MABATI</h3>
+            <ul class="benefits-list">
+                <li>High corrosive resistance</li>
+                <li>High Gloss and Scratch Resistant</li>
+                <li>Unique Heat Reflection capabilities</li>
+                <li>Modern appearance and greater aesthetic appeal</li>
+                <li>Value for money</li>
+                <li>Available in all gauges; for low medium and high cost roofing solutions</li>
+                <li>Variety of colours, profiles, and customised sizes</li>
+                <li>Suitable for all applications</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2 class="section-title"># Our Products</h2>
+            <p class="section-subtitle">Browse our premium selection of roofing materials</p>
+            <div class="divider"></div>
+
+            <div class="products-grid">
+                
+                <!-- PRODUCT 1 (IMAGE) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/IMG-20260731-WA0003.jpg" alt="Product 1" />
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 1</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%201" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 2 (IMAGE) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/IMG-20260731-WA0004.jpg" alt="Product 2" />
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 2</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%202" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 3 (IMAGE) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/IMG-20260731-WA0005.jpg" alt="Product 3" />
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 3</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%203" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 4 (IMAGE) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/IMG-20260731-WA0006.jpg" alt="Product 4" />
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 4</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%204" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 5 (IMAGE) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/IMG-20260731-WA0007.jpg" alt="Product 5" />
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 5</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%205" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 6 (IMAGE) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/IMG-20260731-WA0008.jpg" alt="Product 6" />
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 6</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%206" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 7 (IMAGE) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/IMG-20260731-WA0009.jpg" alt="Product 7" />
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 7</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%207" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 8 (IMAGE) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/IMG-20260731-WA0014.jpg" alt="Product 8" />
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 8</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%208" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 
+                    ========================================
+                    PRODUCTS 9-16 ARE VIDEOS
+                    Replace the "src" with your video file names
+                    ========================================
+                -->
+
+                <!-- PRODUCT 9 (VIDEO) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- 👇 Replace "video-9.mp4" with your actual video file name -->
+                        <video src="images/VID-20260731-WA0010.mp4" muted loop autoplay playsinline></video>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 9</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%209" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 10 (VIDEO) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- 👇 Replace "video-10.mp4" with your actual video file name -->
+                        <video src="images/VID-20260731-WA0011.mp4" muted loop autoplay playsinline></video>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 10</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%2010" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 11 (VIDEO) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- 👇 Replace "video-11.mp4" with your actual video file name -->
+                        <video src="images/VID-20260731-WA0012.mp4" muted loop autoplay playsinline></video>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 11</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%2011" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 12 (VIDEO) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- 👇 Replace "video-12.mp4" with your actual video file name -->
+                        <video src="images/VID-20260731-WA0013.mp4" muted loop autoplay playsinline></video>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 12</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%2012" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 13 (VIDEO) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- 👇 Replace "video-13.mp4" with your actual video file name -->
+                        <video src="images/VID-20260731-WA0015.mp4" muted loop autoplay playsinline></video>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 13</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%2013" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 14 (VIDEO) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- 👇 Replace "video-14.mp4" with your actual video file name -->
+                        <video src="images/VID-20260731-WA0016.mp4" muted loop autoplay playsinline></video>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 14</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%2014" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 15 (VIDEO) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- 👇 Replace "video-15.mp4" with your actual video file name -->
+                        <video src="images/VID-20260731-WA0017.mp4" muted loop autoplay playsinline></video>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 15</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%2015" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 16 (VIDEO) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <!-- 👇 Replacimages/video-16.mp4e "video-16.mp4" with your actual video file name -->
+                        <video src="images/VID-20260731-WA0018.mp4" muted loop autoplay playsinline></video>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">Product 16</h3>
+                        <div class="product-buttons">
+                            <a href="tel:0762727978" class="btn btn-order">📞 Call to Order</a>
+                            <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20want%20to%20order%20Product%2016" 
+                               target="_blank" 
+                               class="btn btn-whatsapp-order">💬 Order via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- END PRODUCT GRID -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">📞 Contact Us</h2>
+            <div class="divider"></div>
+            
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3>Get in Touch</h3>
+                    <p><strong>Phone:</strong> <a href="tel:0762727978">0762 727 978</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:Royalmabatilimitedcompany@gmail.com">Royalmabatilimitedcompany@gmail.com</a></p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/254762727978" target="_blank">Chat with us</a></p>
+                    <div class="contact-buttons">
+                        <a href="tel:0762727978" class="btn btn-order">📞 Call Now</a>
+                        <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20need%20a%20quote%20for%20roofing%20sheets" 
+                           target="_blank" 
+                           class="btn btn-whatsapp-order">💬 WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🏠 Royal Mabati Ltd.</h3>
+                    <p>Premium quality roofing sheets for every Kenyan home</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📞 <a href="tel:0762727978">0762 727 978</a></p>
+                    <p>📧 <a href="mailto:Royalmabatilimitedcompany@gmail.com">Email Us</a></p>
+                    <p>💬 <a href="https://wa.me/254762727978" target="_blank">WhatsApp</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Royal Mabati Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/254762727978?text=Hello%20Royal%20Mabati%2C%20I%20need%20a%20quote%20for%20roofing%20sheets" 
+       target="_blank" 
+       class="whatsapp-float">
+        💬 WhatsApp
+    </a>
+
+</body>
+</html>
